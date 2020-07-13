@@ -1,0 +1,35 @@
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn"> 点击微信授权 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-personalSign">{{personalSign}}</text>
+  </block>
+</view>
+
+<view class="person-list">
+  <view class="list-item">
+    <image class="item-image" src="../../images/publish_goods.png"></image>
+    <text class="item-text" bindtap='my_publish'>我的发布</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/address.png"></image>
+    <text class="item-text" bindtap="PersonalInfo">个人信息</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/personal_favorite.png"></image>
+    <text class="item-text" bindtap="orderInfo" >我的订购商品</text>
+  </view>
+  <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/enshrine_select.png"></image>
+    <text class="item-text" bindtap="selledInfo" >已售出的商品</text>
+  </view>
+  <!-- <view class="person-line"></view>
+  <view class="list-item">
+    <image class="item-image" src="../../images/exit.png"></image>
+    <text class="item-text" bindtap='exit_number'>退出登录</text>
+  </view> -->
+</view>

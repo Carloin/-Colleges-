@@ -1,0 +1,138 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+/* 头部模块 */
+.head{
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* background:	#FFA500; */
+   width: 100%; 
+  height: 100rpx;
+  border-bottom:1px solid #edf0f3;
+  padding: 5px; 
+  /* transform: scaleY(0.5);  */
+}
+.head .head_image{
+  margin-left: 5px;
+  width: 12%;
+  height: 80%;
+  margin-top:15rpx;
+}
+.head .head_image
+.icon{
+  width: 100%;
+  height: 100%;
+}
+.middle{
+  font-size: 15px;
+  width: 60%;
+  height: 100%;
+  font-family: "宋体";
+  font-weight: bold;
+  /* background-color: rebeccapurple; */
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.middle .title{
+  color: black;
+  width: 100%;
+  height: 50%;
+  /* padding-top: 25rpx;  */
+  line-height: 80rpx;
+  /* background-color: red; */
+}
+.middle .date{
+  color: gray;
+  width: 100%;
+  height: 50%;
+  line-height: 60rpx;
+  /* background-color: yellow; */
+}
+/**商品价格**/
+.product-price-wrap{
+  display: flex;
+  justify-content:space-between;/**两边对齐**/
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:5px 5px;
+   /* border:1rpx solid red;   */
+}
+ .product-price-wrap .product-price-new{
+  color: red;
+  font-size: 40rpx;
+  margin: 10rpx;
+}
+
+/* 卖点 */
+.product-sellPoint-wrap{
+    margin: 20px 10px;
+    font-size: 20px;
+    color: black;
+    font-family: '微软雅黑';
+ }
+
+.product-name-wrap{
+    margin: 0px 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    font-family: '微软雅黑';
+}
+.details{
+   padding: 0 5px 0 5px; 
+}
+
+.image_detail {
+  width: 100%;
+  /* height: 750rpx; */
+}
+/* 底部悬浮窗 */
+.detail-nav {
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+.button-red {
+  background-color: #7B68EE;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 15rpx;
+  width: 30%;
+  height: 80%;
+  line-height: 80rpx;
+  margin-right:5%;  
+}
+.addLike{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  margin-left: 20rpx;
+  padding: 5rpx;
+}
+.addLike image{
+  margin-left: 10%;
+  align-items: center;
+  width: 80%;
+  /* height: 40%; */
+}
+.addLike text{
+  color: #A9A9A9;
+  font-size: 30rpx;
+}
+/* 占位 */
+.temp {
+  height: 100rpx;
+}

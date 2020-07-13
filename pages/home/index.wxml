@@ -1,0 +1,51 @@
+
+<!-- 搜索框 -->
+<view class='search_contain'>
+  <view class='search'>
+    <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query_solf' class='text'></input>
+    <image class="" src='../../images/search.png' bindtap='query'></image>
+  </view>
+</view>
+<!-- 类型选择 -->
+<view>
+  <view class="head">
+    <block wx:for-items="{{selectData}}" wx:key='this'>
+        <view class="type" catchtap='optionTap' data-id='{{item.id}}'>{{item.text}}</view>
+    </block>
+  </view>
+</view>
+
+<!-- 商品主体 -->
+<view class="goods-container"> 
+    <view class="category-title">
+      <!-- <text class="title">为你推荐</text> -->
+      <view class="like-top">
+        <view class="liketop-name">猜你喜欢</view>
+        <view class="liketop-line"></view>
+		  </view>
+  <scroll-view scroll-y="true">
+        <view class="goods">
+           <block wx:for-items="{{Goods}}">
+              <view class="goods-good" catchtap="catchTapCategory" data-name="{{item.title}}" data-goodsid="{{item.id}}">
+                  <view class='goods-image'>
+                    <image src="{{item.image}}"/> 
+                  </view>
+                  <view class="product-name">
+                    {{item.title}}   
+                  </view>
+                  <view class="product-price-wrap">
+                    <p class="product-price">￥{{item.price}}</p>  
+                    <p class="date">{{item.created}}</p>  
+                  </view>
+              </view>
+          </block> 
+    
+        </view>
+    </scroll-view>
+    </view>
+    <!-- 下拉加载更多的布局 -->
+  <view class="weui-loadmore" hidden="{{hidden}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">努力加载中</view>
+  </view>
+</view>  

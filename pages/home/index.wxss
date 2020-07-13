@@ -1,0 +1,219 @@
+page{  
+  display: flex;  
+  flex-direction: column;
+  /* flex-wrap: wrap;   */
+  height: 100%;  
+}
+/* 搜索框样式 */
+.search_contain{
+  width: 100%;
+  height: 150rpx;
+  background-color: 	#7B68EE;
+  /* background-color: red; */
+  display: inline-block;
+  /* flex-direction: row;
+  justify-content:center; */
+  position:relative;
+}
+.search
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:95%;
+  height:80rpx;
+  background-color:whitesmoke;
+  margin: 5px 2%; 
+  border:1rpx solid whitesmoke;
+  border-radius: 5px;
+  z-index: 2;
+  /* padding-top: 10rpx;  */
+}
+.search .text{
+  width: 85%;
+}
+
+/* 搜索框提示文字样式 */
+.search input
+{
+  font-size:30rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+}
+
+/* 搜索框小图标 */
+.search image
+{ 
+  width:45rpx;
+  height:45rpx;
+  padding-right:20rpx;
+}
+.head{
+  /* background-color: red; */
+  display: flex;
+  /* width: 98%; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  /* margin:2px 1%; */
+  /* margin-top:100rpx; */
+  z-index: 1;
+}
+
+.type{
+  width:24%;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-left: 1px;
+  margin-top: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.active-tag .type{
+  background: #03e2ff;
+  color: #fff;
+  border: 1rpx solid #fff;
+}
+
+.goods-container{
+  position: relative;
+  /* margin-top: 70px; */
+}
+/* .category-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 0rpx;
+  /* padding: 0px 10px; */
+/* } 
+.category-title .title{
+  font-size: 16px;
+  font-weight:900;
+}  */
+
+.like-top{
+  width:520rpx;
+  height:30rpx;
+  line-height:30rpx;
+  position:relative;
+  color:#888888;
+  font-size:30rpx;
+  margin:27rpx auto;
+}
+.liketop-name{
+  position:absolute;
+  width:194rpx;
+  height:30rpx;
+  left:163rpx;
+  top:0;
+  background:#eeeeee url(../images/likestar.png) no-repeat 18rpx 4rpx;
+  background-size:26rpx 22rpx;
+  z-index:2;
+  text-align:center;
+  text-indent:52rpx;
+}
+.liketop-line{
+  position:absolute;
+  width:100%;
+  height:1px;
+  background-color:#e0e0e0;
+  top:14.5rpx;
+  left:0;
+  z-index:1;
+
+}
+
+.goods{  
+    display: flex;  
+    justify-content: start;
+    flex-direction: row;  
+    flex-wrap: wrap;  
+    /* margin:10px 5px; */
+    zoom:1;
+    clear:both;
+
+}
+.goods-good{ 
+    width:49%;
+    float:left;
+    vertical-align:top;
+    border:1px solid #f2f2f2;
+    background-color:white;
+    margin-bottom:8rpx;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-right:1%;
+}
+.goods-image{  
+  margin:20rpx auto;
+  text-align: center;
+}
+.goods-image image{
+  width:350rpx;
+  height:350rpx;
+
+}
+.goods-good .product-name{  
+    color: #000;  /* height: 28px; */
+    text-align:left;   
+    margin: 0px 5px; 
+    margin-bottom: 5px;
+    /* 控制字符长度 */
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    align-content: center; 
+}
+.product-price-wrap{  
+    height: 40rpx;
+}
+.product-price-wrap .product-price{  
+    color: #e80080;  
+    margin-left:5px;  
+    font-weight:900;  
+    font-size: 30rpx;
+}
+.product-price-wrap .date{ 
+    /* color: #FFA500;  
+    position: absolute;  
+    right: 5px;
+    font-weight:600; 
+    font-size: 30rpx;   */
+    /* color: #000; */
+
+    font-size:30rpx;
+    color:#FFA500;
+    float: right
+
+}
+/*  加载更多   */
+.weui-loading {  
+    margin: 0 5px;  
+    width: 20px;  
+    height: 20px;  
+    display: inline-block;  
+    vertical-align: middle;  
+    -webkit-animation: weuiLoading 1s steps(12, end) infinite;  
+    animation: weuiLoading 1s steps(12, end) infinite;  
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;  
+    background-size: 100%;
+}
+.weui-loadmore {  
+    width: 65%;  
+    margin: 1.5em auto;  
+    line-height: 1.6em;  
+    font-size: 12px;  
+    text-align: center;
+}
+.weui-loadmore__tips {  
+    display: inline-block;  
+    vertical-align: middle;  
+    color: #888;
+}

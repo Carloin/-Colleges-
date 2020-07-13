@@ -1,0 +1,42 @@
+<view class = 'head'> 
+    <view class='head_image'>
+      <image src='../../images/publish_goods.png' class='icon'/>
+    </view>
+    <view class='middle'>
+      <p class='title'>{{username}}</p>
+      <p class='date'>{{goods.created}}</p>
+    </view>
+</view>
+
+<view style='margin-top:15px;'>
+  <view class="product-name-wrap">
+    {{goods.title}}
+    <!-- 羊毛呢背带裙春季女张大奕吾欢喜的衣橱2019新款女装A字短裙 -->
+  </view>
+  <view class="product-price-wrap">
+        <p class="product-price-new">￥{{goods.price}}</p>  
+        <!-- <p class="product-price-new">￥1000000</p>  -->
+  </view>
+  <view class="product-sellPoint-wrap">
+    {{goods.sell_point}}
+    <!-- 羊毛呢背带裙春季女张大奕吾欢喜的衣橱2019新款女装A字短裙 -->
+  </view>
+</view>
+
+ <view class="details"> 
+  <scroll-view scroll-y="true">
+    <block wx:for-items="{{desc}}">
+       <image class="image_detail" src="{{item}}" mode="widthFix"/> 
+    </block>
+    <view class="temp"></view>
+  </scroll-view>
+ </view>
+
+<!-- 底部悬浮窗 -->
+ <view class='detail-nav'>
+    <view class = 'addLike'>
+      <image bindtap="addLike" src="{{isLike?'../../images/enshrine_select.png':'../../images/enshrine.png'}}" />
+      <text>订购</text>
+    </view> 
+    <button class="button-red" bindtap="contact" formType="submit">联系TA</button>
+ </view>   

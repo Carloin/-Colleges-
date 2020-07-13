@@ -1,0 +1,13 @@
+@import "../../colorui/main.wxss";
+@import "../../colorui/icon.wxss";
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+}

@@ -1,0 +1,18 @@
+ <block wx:for-items="{{Goods}}" wx:for-index='index'>
+  <view class = 'head'> 
+      <view class='head_image' catchtap="catchTapCategory" data-index='{{index}}'>
+        <image src='{{item.picPath}}' class='icon'/>
+      </view>
+      <view class='middle' catchtap="catchTapCategory" data-index='{{index}}'>
+        <p class='title'>{{item.title}}</p>
+        <p class='title'>￥{{item.price}}</p>
+        <p class='date'>{{item.created}}</p>
+      </view>
+      <view class='head_right'>
+        <p wx:if="{{item.status==1}}" class='edit' catchtap="edit" data-id='{{item.id}}'>确认收货</p>
+        <p wx:if="{{item.status==1}}" class='delete' catchtap="goods_delete" data-id='{{item.id}}'>取消订单</p>
+        <p wx:elif="{{item.status==2}}" style="color:grey;margin-top:30%;" class='delete'>已取消</p>
+        <p wx:elif="{{item.status==3}}" style="color:grey;margin-top:30%;" class='delete'>已完成订单</p>
+      </view>
+  </view>
+</block>

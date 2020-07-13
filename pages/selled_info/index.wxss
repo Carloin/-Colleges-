@@ -1,0 +1,77 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+/* 头部模块 */
+
+.head{
+  display: flex;
+  /* background:	#FFA500; */
+  margin: 15px 2px;
+  width: 93%; 
+  height: 150rpx;
+  /* border-bottom:1px solid #edf0f3; */
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 10px; 
+  /* transform: scaleY(0.5);  */
+}
+.head .head_image{
+  /* margin-left: 5px; */
+  width: 22%;
+  height: 100%;
+  /* margin-top:15rpx; */
+  border: 1px solid #edf0f3;
+}
+.head .head_image
+.icon{
+  width: 100%;
+  height: 100%;
+}
+.middle{
+  width: 48%;
+  height: 100%;
+  font-family: "宋体";
+  font-weight: bold;
+  /* background-color: rebeccapurple; */
+  /* margin-left: 10px; */
+  display: flex;
+  flex-direction: column;
+}
+.middle .title{
+  font-size: 20px;
+  color: black;
+  width: 100%;
+  height: 35%;
+  padding-left: 10px;
+  line-height: 70rpx;
+  /* 文字超过长度后省略 */
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-content: center;
+}
+.middle .date{
+  padding-left: 10px;
+  font-size: 15px;
+  color: gray;
+  width: 100%;
+  height: 30%;
+  line-height: 50rpx;
+  /* background-color: yellow; */
+}
+.head .head_right{
+  width: 30%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  text-align: center;
+  color: 	#87CEFA;
+}
+.head .head_right
+.edit{
+  font-size: 35rpx;
+  width: 100%;
+  /* background-color: yellow; */
+}

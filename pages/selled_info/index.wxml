@@ -1,0 +1,16 @@
+<block wx:for-items="{{Goods}}" wx:for-index='index'>
+  <view class = 'head'> 
+      <view class='head_image'>
+        <!-- <image src='../../images/我的发布测试.jpg' class='icon'/> -->
+        <image src='{{item.picPath}}' class='icon'/>
+      </view>
+      <view class='middle'>
+        <p class='title'>{{item.title}}</p>
+        <p class='title'>￥{{item.price}}</p>
+        <p class='date'>{{item.created}}</p>
+      </view>
+      <view class='head_right'>
+        <p class='edit' catchtap="edit" data-id='{{index}}'>买家信息</p>
+      </view>
+  </view>
+</block>

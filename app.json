@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/edit/edit",
+    "pages/goodsDetail/goodsDetail",
+    "pages/my_home/my_home",
+    "pages/publish/publish",
+    "pages/my_publish/my_publish",
+    "pages/personal_info/info",
+    "pages/home/search/search",
+    "pages/order/order",
+    "pages/selled_info/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#7B68EE",
+    "navigationBarTitleText": "高校闲置物品小程序",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#7B68EE"
+  },
+  "tabBar": {
+    "color": "858585",
+    "selectedColor": "#7B68EE",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "广场",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页2.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "images/订单2.png",
+        "selectedIconPath": "images/订单.png"
+      },
+      {
+        "pagePath": "pages/my_home/my_home",
+        "text": "我的",
+        "iconPath": "images/我的2.png",
+        "selectedIconPath": "images/我的.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

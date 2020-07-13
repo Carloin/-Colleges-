@@ -1,0 +1,60 @@
+<view class = "publish_container">
+  <view>
+    <input type='text' class="publish_name" placeholder='请输入商品名称' placeholder-style='color:grey' placeholder-style='goods_name' maxlength='20' bindinput='pub_nameInput' value='{{pub_title}}'/>
+    <!-- <textarea placeholder='请描述商品细节，200字以内' class = "publish_text" maxlength='200' bindinput='pub_texts' auto-focus='true' value='{{pub_text}}' /> -->
+    <view class="cu-form-group margin-top">
+		  <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="请描述商品细节，200字以内" maxlength='200' bindinput='pub_texts' value='{{pub_text}}'></textarea>
+	  </view>
+  </view>
+  <!-- 添加照片 -->
+  <view class='img_body'>
+    <view class='img_list'>
+      <view class='img_li' wx:for="{{imagelist}}" wx:key="{{index}}">
+        <image src="{{item}}"></image>
+        <image class="closeImv" src="../../images/close.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}" style="width:60rpx;height:60rpx;"></image>
+      </view>
+      <view class='addimg' bindtap='image'>
+        <image src='../../images/camera.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='pub_detail'>
+      <button class='botton1' bindtap='price_action' >具体价格</button>
+      <!-- <button class='botton1' bindtap='negotiation_action'>联系方式</button> -->
+
+      <view class='select_box'>
+        <view class='select' catchtap='selectTap'>
+            <text wx:if='{{index==-1}}' class='select_text'>商品类型</text>
+            <text wx:else class='select_text'>{{selectData[index-1].text}}</text>
+            <image class='select_img {{selectShow&&"select_img_rotate"}}' src='../../images/st-down.png'  background-size="contain"></image> 
+        </view>
+        <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
+            <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{item.id}}' catchtap='optionTap'>{{item.text}}</text>
+        </view>
+      </view>
+
+  </view>
+
+  <view class="pub_style">
+    <view wx:if="{{price_botton}}" class='price'>
+        <p style="line-height: 65px;">￥</p>
+        <input type='text' placeholder='请输入具体价格' class = "price_text" maxlength='200' bindinput='price_texts' auto-focus='true' value='{{pub_price}}' type="number" />
+    </view>
+
+    <view wx:elif="{{negotiation_botton}}" class='negotiation'>
+        <!-- 第一版本为面议的时候的单选框 -->
+        <!-- <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </radio-group> -->
+        <p class="phone">联系电话：</p>
+        <input type='text' maxlength='11' bindinput='phone_Input' class='phone_input' value='{{pub_phone}}' type="number" />
+    </view>
+  </view>
+
+  <view class='publish_botton'>
+      <button class="pub_button" bindtap='pub_button'>发布</button>
+  </view>  
+</view>
